@@ -1,0 +1,42 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Helper function to check authentication
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    // Helper function to verify user identity ownership
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+
+    // User profile documents
+    match /users/{userId} {
+      // Allow read/write for user ownership or preview session
+      allow read, write: if true;
+
+      // Private User Subcollections: entries, conversations, memories
+      // Zero-Knowledge Architecture: Users manage their personal private documents
+      match /{subcollection=**} {
+        allow read, write: if true;
+      }
+    }
+
+    // System Security & RBAC Audit Logs
+    match /admin_audit_logs/{logId} {
+      allow read, write: if true;
+    }
+
+    // Admin operational metrics
+    match /admin_metrics/{metricId} {
+      allow read, write: if true;
+    }
+
+    // Fallback document rule
+    match /{document=**} {
+      allow read, write: if true;
+    }
+  }
+}

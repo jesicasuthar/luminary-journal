@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .font-serif-literary {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+  .font-sans-editorial {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+  .font-handwriting {
+    font-family: 'Caveat', cursive, sans-serif;
+  }
+  .font-typewriter {
+    font-family: 'Special Elite', 'Courier New', Courier, monospace;
+  }
+}
+
+/* Custom Vintage Journal Effects */
+.paper-texture {
+  background-image: radial-gradient(#d6c9b3 0.65px, transparent 0.65px), radial-gradient(#d6c9b3 0.65px, #fbf8f2 0.65px);
+  background-size: 26px 26px;
+  background-position: 0 0, 13px 13px;
+}
+
+.paper-texture-dark {
+  background-image: radial-gradient(#2a3447 0.65px, transparent 0.65px), radial-gradient(#2a3447 0.65px, #121824 0.65px);
+  background-size: 26px 26px;
+  background-position: 0 0, 13px 13px;
+}
+
+.lined-paper {
+  background-image: linear-gradient(#e5ddd0 1px, transparent 1px);
+  background-size: 100% 2.25rem;
+  line-height: 2.25rem;
+}
+
+.lined-paper-dark {
+  background-image: linear-gradient(#283344 1px, transparent 1px);
+  background-size: 100% 2.25rem;
+  line-height: 2.25rem;
+}
+
+/* Subtle Polaroid shadow */
+.shadow-polaroid {
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.06), 0 0 1px rgba(0,0,0,0.15);
+}
+
+.shadow-polaroid-dark {
+  box-shadow: 0 12px 30px -5px rgba(0, 0, 0, 0.6), 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+/* Aged paper edge border */
+.vintage-border {
+  box-shadow: inset 0 0 40px rgba(184, 155, 120, 0.12);
+}
+
+/* Smooth subtle transitions between time phases */
+* {
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 400ms;
+}
+
+/* Custom vintage scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(160, 140, 120, 0.3);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(160, 140, 120, 0.5);
+}

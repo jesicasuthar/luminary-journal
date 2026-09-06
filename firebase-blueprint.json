@@ -1,0 +1,139 @@
+{
+  "entities": {
+    "User": {
+      "title": "User",
+      "description": "User profile document",
+      "type": "object",
+      "properties": {
+        "uid": {
+          "type": "string",
+          "description": "Unique identifier of the user"
+        },
+        "email": {
+          "type": "string",
+          "format": "email",
+          "description": "Email address of the user"
+        },
+        "displayName": {
+          "type": "string",
+          "description": "Display name of the user"
+        },
+        "createdAt": {
+          "type": "number",
+          "description": "Creation timestamp in milliseconds"
+        },
+        "role": {
+          "type": "string",
+          "enum": ["guest", "user", "admin", "super_admin"],
+          "description": "Role-based access control level"
+        }
+      },
+      "required": ["uid"]
+    },
+    "SecurityAuditLog": {
+      "title": "SecurityAuditLog",
+      "description": "System security and authorization event log",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "timestamp": { "type": "number" },
+        "actor": { "type": "string" },
+        "action": { "type": "string" },
+        "role": { "type": "string" },
+        "status": { "type": "string", "enum": ["GRANTED", "DENIED", "ELEVATED"] },
+        "details": { "type": "string" }
+      },
+      "required": ["id", "timestamp", "actor", "action", "role", "status"]
+    },
+    "JournalEntry": {
+      "title": "JournalEntry",
+      "description": "Individual personal journal entry written by user",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the journal entry"
+        },
+        "userId": {
+          "type": "string",
+          "description": "UID of the owning user"
+        },
+        "title": {
+          "type": "string",
+          "description": "Title of the journal entry"
+        },
+        "body": {
+          "type": "string",
+          "description": "Text content of the reflection"
+        },
+        "date": {
+          "type": "string",
+          "description": "Date string YYYY-MM-DD"
+        },
+        "timestamp": {
+          "type": "number",
+          "description": "Creation timestamp in milliseconds"
+        },
+        "timePhase": {
+          "type": "string",
+          "description": "Time phase during writing (DAWN, DAY, DUSK, NIGHT, MIDNIGHT)"
+        },
+        "mood": {
+          "type": "string",
+          "description": "Emotional mood tone"
+        },
+        "isMemory": {
+          "type": "boolean",
+          "description": "Whether pinned to memory scrapbook"
+        },
+        "aiSummary": {
+          "type": "string",
+          "description": "AI reflection summary"
+        },
+        "createdAt": {
+          "type": "number",
+          "description": "Creation timestamp"
+        },
+        "updatedAt": {
+          "type": "number",
+          "description": "Last update timestamp"
+        }
+      },
+      "required": ["id", "userId", "title", "body", "timestamp", "timePhase", "mood"]
+    },
+    "Conversation": {
+      "title": "Conversation",
+      "description": "Multi-turn Gemini companion session",
+      "type": "object",
+      "properties": {
+        "updatedAt": {
+          "type": "number",
+          "description": "Last updated timestamp"
+        },
+        "messageCount": {
+          "type": "number",
+          "description": "Count of messages"
+        }
+      },
+      "required": ["updatedAt"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "User",
+      "description": "User profile document storing basic user details"
+    },
+    "/users/{userId}/entries/{entryId}": {
+      "schema": "JournalEntry",
+      "description": "Private journal entries authored by the user"
+    },
+    "/users/{userId}/conversations/{conversationId}": {
+      "schema": "Conversation",
+      "description": "Gemini reflection conversation history for the user"
+    },
+    "/admin_audit_logs/{logId}": {
+      "schema": "SecurityAuditLog",
+      "description": "System security and RBAC event audit trail"
+    }
+  }
+}
