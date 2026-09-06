@@ -14,29 +14,39 @@ service cloud.firestore {
 
     // User profile documents
     match /users/{userId} {
-      // Allow read/write for user ownership or preview session
-      allow read, write: if true;
+      // Zero-Knowledge Architecture: only the authenticated owner may
+      // read or write their own profile document.
+      allow read, write: if isOwner(userId);
 
       // Private User Subcollections: entries, conversations, memories
-      // Zero-Knowledge Architecture: Users manage their personal private documents
+      // Structural path isolation - a user can never read or write
+      // another UID's subcollection documents.
       match /{subcollection=**} {
-        allow read, write: if true;
+        allow read, write: if isOwner(userId);
       }
     }
 
     // System Security & RBAC Audit Logs
+    // Written exclusively by the trusted server via the Firebase Admin SDK
+    // (which bypasses these rules). No direct client access, read or write,
+    // is ever permitted - this keeps the audit trail append-only and
+    // tamper-proof from the client.
     match /admin_audit_logs/{logId} {
-      allow read, write: if true;
+      allow read, write: if false;
     }
 
     // Admin operational metrics
+    // Same reasoning as audit logs: server-only via Admin SDK.
     match /admin_metrics/{metricId} {
-      allow read, write: if true;
+      allow read, write: if false;
     }
 
-    // Fallback document rule
+    // Fallback document rule: deny by default. Every collection Luminary
+    // actually uses is covered by an explicit rule above; anything not
+    // explicitly allowed must be explicitly denied.
     match /{document=**} {
-      allow read, write: if true;
+      allow read, write: if false;
     }
   }
 }
+

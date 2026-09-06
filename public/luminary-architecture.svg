@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 580" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#020617" />
+    </linearGradient>
+    <linearGradient id="clientGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    <linearGradient id="firestoreGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    <linearGradient id="serverGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    <linearGradient id="geminiGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2e1065" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <marker id="arrowAmber" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M 0 0 L 8 4 L 0 8 z" fill="#f59e0b" />
+    </marker>
+    <marker id="arrowBlue" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M 0 0 L 8 4 L 0 8 z" fill="#38bdf8" />
+    </marker>
+    <marker id="arrowPurple" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M 0 0 L 8 4 L 0 8 z" fill="#c084fc" />
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1000" height="580" rx="16" fill="url(#bgGrad)" stroke="#334155" stroke-width="1.5" />
+
+  <!-- Title & Subtitle -->
+  <text x="50" y="42" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="700">Luminary Security &amp; Enterprise Architecture</text>
+  <text x="50" y="64" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13">Zero-Knowledge Isolation • Cloud Run Container • Cloud Firestore • Gemini API</text>
+
+  <!-- 1. Client Browser (Top Box) -->
+  <g transform="translate(160, 90)">
+    <rect width="680" height="100" rx="12" fill="url(#clientGrad)" stroke="#38bdf8" stroke-width="1.5" />
+    <circle cx="28" cy="28" r="10" fill="#38bdf8" opacity="0.2" />
+    <text x="28" y="32" text-anchor="middle" fill="#38bdf8" font-size="12">💻</text>
+    <text x="50" y="33" fill="#f8fafc" font-family="sans-serif" font-size="15" font-weight="700">Client Web Browser (React 18 + Vite + Tailwind v4)</text>
+    <text x="50" y="58" fill="#94a3b8" font-family="sans-serif" font-size="12.5">• Chrono-Adaptive Solar Time Engine (Dawn, Midday, Golden Hour, Twilight, Midnight)</text>
+    <text x="50" y="78" fill="#94a3b8" font-family="sans-serif" font-size="12.5">• In-Memory Audio Dictation Recorder • Polaroid Memory Capture • 3D Constellation of Thoughts</text>
+  </g>
+
+  <!-- Connecting Lines from Client down to Firestore and Server -->
+  <!-- Left path to Firestore -->
+  <path d="M 330 190 L 330 250" fill="none" stroke="#f59e0b" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#arrowAmber)" />
+  <rect x="205" y="210" width="220" height="22" rx="6" fill="#1e293b" stroke="#f59e0b" stroke-width="1" />
+  <text x="315" y="225" text-anchor="middle" fill="#f59e0b" font-family="sans-serif" font-size="11" font-weight="600">① Zero-Knowledge Sync (UID Bound)</text>
+
+  <!-- Right path to Server -->
+  <path d="M 670 190 L 670 250" fill="none" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrowBlue)" />
+  <rect x="555" y="210" width="220" height="22" rx="6" fill="#1e293b" stroke="#38bdf8" stroke-width="1" />
+  <text x="665" y="225" text-anchor="middle" fill="#38bdf8" font-family="sans-serif" font-size="11" font-weight="600">② Protected Server API (Bearer Auth)</text>
+
+  <!-- 2. Google Cloud Firestore (Bottom Left) -->
+  <g transform="translate(50, 260)">
+    <rect width="420" height="280" rx="12" fill="url(#firestoreGrad)" stroke="#f59e0b" stroke-width="1.5" />
+    <text x="24" y="36" fill="#fbbf24" font-family="sans-serif" font-size="15" font-weight="700">🛡️ Cloud Firestore (Zero-Knowledge)</text>
+    
+    <!-- Partition 1 -->
+    <rect x="18" y="52" width="384" height="48" rx="8" fill="#0f172a" stroke="#334155" />
+    <text x="30" y="72" fill="#f1f5f9" font-family="monospace" font-size="12" font-weight="600">/users/{userId}/entries/{entryId}</text>
+    <text x="30" y="89" fill="#94a3b8" font-family="sans-serif" font-size="11">↳ Encrypted user journal reflections (Owner UID restricted)</text>
+
+    <!-- Partition 2 -->
+    <rect x="18" y="108" width="384" height="48" rx="8" fill="#0f172a" stroke="#334155" />
+    <text x="30" y="128" fill="#f1f5f9" font-family="monospace" font-size="12" font-weight="600">/users/{userId}/conversations/{convId}</text>
+    <text x="30" y="145" fill="#94a3b8" font-family="sans-serif" font-size="11">↳ Multi-turn Socratic companion chat logs</text>
+
+    <!-- Partition 3 -->
+    <rect x="18" y="164" width="384" height="48" rx="8" fill="#0f172a" stroke="#334155" />
+    <text x="30" y="184" fill="#f1f5f9" font-family="monospace" font-size="12" font-weight="600">/admin_audit_logs/{logId}</text>
+    <text x="30" y="201" fill="#94a3b8" font-family="sans-serif" font-size="11">↳ Server-only immutable audit trail (Client write: false)</text>
+
+    <!-- Rules Status -->
+    <rect x="18" y="222" width="384" height="44" rx="8" fill="#451a03" stroke="#f59e0b" stroke-width="0.8" />
+    <text x="30" y="240" fill="#fef3c7" font-family="sans-serif" font-size="11" font-weight="600">🔐 Declarative Security: isOwner(userId) enforced</text>
+    <text x="30" y="255" fill="#fde68a" font-family="sans-serif" font-size="10.5">Strict zero-cross-user access • match /{document=**}: deny</text>
+  </g>
+
+  <!-- 3. Express Container on Cloud Run (Middle Right) -->
+  <g transform="translate(530, 260)">
+    <rect width="420" height="150" rx="12" fill="url(#serverGrad)" stroke="#38bdf8" stroke-width="1.5" />
+    <text x="24" y="34" fill="#38bdf8" font-family="sans-serif" font-size="15" font-weight="700">🚀 Express Backend on Google Cloud Run</text>
+    
+    <rect x="18" y="48" width="384" height="40" rx="6" fill="#0f172a" stroke="#334155" />
+    <text x="30" y="66" fill="#e2e8f0" font-family="sans-serif" font-size="12" font-weight="600">🛡️ RBAC Enforcement Engine</text>
+    <text x="30" y="80" fill="#94a3b8" font-family="sans-serif" font-size="11">Endpoints: /api/admin/verify • /api/admin/metrics • /api/admin/directive</text>
+
+    <rect x="18" y="96" width="384" height="42" rx="6" fill="#0f172a" stroke="#334155" />
+    <text x="30" y="113" fill="#e2e8f0" font-family="sans-serif" font-size="12" font-weight="600">🔑 Secure Key Management</text>
+    <text x="30" y="128" fill="#94a3b8" font-family="sans-serif" font-size="11">GEMINI_API_KEY sealed on server (zero browser exposure)</text>
+  </g>
+
+  <!-- Path from Server down to Gemini API -->
+  <path d="M 740 410 L 740 438" fill="none" stroke="#c084fc" stroke-width="2" marker-end="url(#arrowPurple)" />
+  <rect x="630" y="415" width="220" height="20" rx="6" fill="#1e293b" stroke="#c084fc" stroke-width="1" />
+  <text x="740" y="429" text-anchor="middle" fill="#c084fc" font-family="sans-serif" font-size="10.5" font-weight="600">③ Directive-Guarded Prompt</text>
+
+  <!-- 4. Google Gemini API (Bottom Right) -->
+  <g transform="translate(530, 442)">
+    <rect width="420" height="98" rx="12" fill="url(#geminiGrad)" stroke="#c084fc" stroke-width="1.5" />
+    <text x="24" y="30" fill="#e9d5ff" font-family="sans-serif" font-size="14.5" font-weight="700">✨ Google Gemini API (@google/genai)</text>
+    <text x="24" y="52" fill="#d8b4fe" font-family="sans-serif" font-size="12">• Gemini 2.5 Flash / Gemini 2.0 Flash Reasoning</text>
+    <text x="24" y="70" fill="#94a3b8" font-family="sans-serif" font-size="11.5">• Pre-execution anti-prompt injection filters (system boundary verification)</text>
+    <text x="24" y="86" fill="#94a3b8" font-family="sans-serif" font-size="11.5">• Zero Cross-User Context • Socratic, Stoic, Poetic Reflection Prompts</text>
+  </g>
+</svg>
