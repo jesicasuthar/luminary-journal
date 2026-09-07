@@ -153,7 +153,6 @@ Below are the official submission deliverables for the **GenPAC AI Ideathon Chal
 - **Public Code Repository**: [https://github.com/jesicasuthar/luminary-journal](https://github.com/jesicasuthar/luminary-journal)
 - **Medium Article**: [Building Luminary: An Isolated, Authenticated AI Journal Powered by Gemini and Cloud Run](https://medium.com/@jesica.s.suthar/building-luminary-an-isolated-authenticated-ai-journal-powered-by-gemini-and-cloud-run-b8a4b696cb04?sharedUserId=jesica.s.suthar)
 - **Substack Deep Dive**: [Building Luminary: An Isolated, Authenticated AI Journal Powered by Gemini and Cloud Run](https://jesicasuthar.substack.com/p/building-luminary-an-isolated-authenticated?r=8npch3&utm_campaign=post-expanded-share&utm_medium=web)
-- **Demo Social Post Link**: `[add your post link featuring #AccelerateAIwithCloudRun once published]`
 
 ### Brief Submission Description
 > Luminary is an enterprise-grade secure AI journaling application deployed on **Google Cloud Run** for the GenPAC AI Ideathon Challenge. It leverages **Firebase Authentication** for user identity management, **Cloud Firestore** for zero-knowledge UID-partitioned document persistence, and an **Express server proxy** running in Cloud Run to interface securely with the **Google Gemini API** (`@google/genai`). Secret keys are kept strictly isolated on the server, while an AI Admin Roles Directive enforces real-time prompt injection defenses and RBAC security rules.
