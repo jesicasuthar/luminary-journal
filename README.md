@@ -8,6 +8,8 @@
 [![Gemini API](https://img.shields.io/badge/Google%20Gemini-2.5%20%2F%202.0%20Flash-8E75B2?logo=googlegemini&logoColor=white)](https://ai.google.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.8-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-CSS%20v4-38BDF8?logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+[![Medium](https://img.shields.io/badge/Medium-Article-12100E?logo=medium&logoColor=white)](https://medium.com/@jesica.s.suthar/building-luminary-an-isolated-authenticated-ai-journal-powered-by-gemini-and-cloud-run-b8a4b696cb04?sharedUserId=jesica.s.suthar)
+[![Substack](https://img.shields.io/badge/Substack-Deep%20Dive-FF6719?logo=substack&logoColor=white)](https://jesicasuthar.substack.com/p/building-luminary-an-isolated-authenticated?r=8npch3&utm_campaign=post-expanded-share&utm_medium=web)
 
 ---
 
@@ -149,6 +151,8 @@ Below are the official submission deliverables for the **GenPAC AI Ideathon Chal
 - **Deployed Application URL**: [https://ais-dev-gcpkqgpbslwq245vnfv7mf-993816265377.asia-southeast1.run.app](https://ais-dev-gcpkqgpbslwq245vnfv7mf-993816265377.asia-southeast1.run.app)
 - **Shared Preview URL**: [https://ais-pre-gcpkqgpbslwq245vnfv7mf-993816265377.asia-southeast1.run.app](https://ais-pre-gcpkqgpbslwq245vnfv7mf-993816265377.asia-southeast1.run.app)
 - **Public Code Repository**: [https://github.com/jesicasuthar/luminary-journal](https://github.com/jesicasuthar/luminary-journal)
+- **Medium Article**: [Building Luminary: An Isolated, Authenticated AI Journal Powered by Gemini and Cloud Run](https://medium.com/@jesica.s.suthar/building-luminary-an-isolated-authenticated-ai-journal-powered-by-gemini-and-cloud-run-b8a4b696cb04?sharedUserId=jesica.s.suthar)
+- **Substack Deep Dive**: [Building Luminary: An Isolated, Authenticated AI Journal Powered by Gemini and Cloud Run](https://jesicasuthar.substack.com/p/building-luminary-an-isolated-authenticated?r=8npch3&utm_campaign=post-expanded-share&utm_medium=web)
 - **Demo Social Post Link**: `[add your post link featuring #AccelerateAIwithCloudRun once published]`
 
 ### Brief Submission Description
