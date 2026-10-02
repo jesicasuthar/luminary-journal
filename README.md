@@ -148,9 +148,7 @@ Luminary introduces several original, high-craft enhancements beyond the base ch
 
 Below are the official submission deliverables for the **GenPAC AI Ideathon Challenge**:
 
-- **Deployed Application URL**: [https://ais-dev-gcpkqgpbslwq245vnfv7mf-993816265377.asia-southeast1.run.app](https://ais-dev-gcpkqgpbslwq245vnfv7mf-993816265377.asia-southeast1.run.app)
 - **Shared Preview URL**: [https://ais-pre-gcpkqgpbslwq245vnfv7mf-993816265377.asia-southeast1.run.app](https://ais-pre-gcpkqgpbslwq245vnfv7mf-993816265377.asia-southeast1.run.app)
-- **Public Code Repository**: [https://github.com/jesicasuthar/luminary-journal](https://github.com/jesicasuthar/luminary-journal)
 - **Medium Article**: [Building Luminary: An Isolated, Authenticated AI Journal Powered by Gemini and Cloud Run](https://medium.com/@jesica.s.suthar/building-luminary-an-isolated-authenticated-ai-journal-powered-by-gemini-and-cloud-run-b8a4b696cb04?sharedUserId=jesica.s.suthar)
 - **Substack Deep Dive**: [Building Luminary: An Isolated, Authenticated AI Journal Powered by Gemini and Cloud Run](https://jesicasuthar.substack.com/p/building-luminary-an-isolated-authenticated?r=8npch3&utm_campaign=post-expanded-share&utm_medium=web)
 
